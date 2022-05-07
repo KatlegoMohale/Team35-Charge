@@ -1,0 +1,24 @@
+<form [formGroup]="newUserTypeForm" (ngSubmit)="onSubmitUserDetails(newUserTypeForm)">
+  
+  <label>User Type Name</label>
+  <input type="text" class="form-control" id="UserTypeName" placeholder="e.g. Applicant" formControlName="UserTypeNameControl"
+    [ngClass]="{
+          'is-valid': !newUserTypeForm.get('UserTypeNameControl')?.hasError('required'),
+          'is-invalid': isSubmitted &&newUserTypeForm.get('UserTypeNameControl')?.hasError('required')
+          }">
+  <div *ngIf="newUserTypeForm.get('UserTypeNameControl')?.hasError('required')" class="invalid-feedback">Please enter name</div>
+  <div *ngIf="isSubmitted &&!newUserTypeForm.get('UserTypeNameControl')?.hasError('required') &&
+  newUserTypeForm.get('UserTypeNameControl')?.hasError('invalidsaid')" class="invalid-feedback">Please eneter a valid User Type name</div>
+
+
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input class="form-control" id="description" required [(ngModel)]="product.description" name="description"/>
+        </div>
+  
+        <button (click)="AddUserType()" class="btn btn-success">Create</button>
+      
+    </div>
+  
+</div>
