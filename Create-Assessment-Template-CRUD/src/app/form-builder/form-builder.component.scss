@@ -1,7 +1,8 @@
 @import "src/theme/theme-variables";
 
 .subscription-form-content-nav {
-  background: linear-gradient(135deg, #0143a3, #0273d4);
+  background: #252433;
+  // linear-gradient(135deg, blue, grey, #2a2a2a, #252433,);
   height: 64px;
 
   a {
@@ -112,9 +113,9 @@ body.drag-drop-page {
   width: 340px;
 }
 
-.form-body {
+// .form-body {
   
-}
+// }
 .email-body {
   height: calc(100vh - 100px) !important;
   overflow-y: auto;

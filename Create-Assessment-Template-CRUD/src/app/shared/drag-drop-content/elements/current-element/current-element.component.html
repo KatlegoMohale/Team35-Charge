@@ -43,10 +43,10 @@
       *ngSwitchCase="'separator'"
       [component]="selectedComponent"
     ></app-separator-property>
-    <app-social-property
+    <!-- <app-social-property
       *ngSwitchCase="'social'"
       [component]="selectedComponent"
-    ></app-social-property>
+    ></app-social-property> -->
   </ng-container>
   <div *ngIf="selectedComponent && selectedComponent.machineName !== 'section'">
     <hr />

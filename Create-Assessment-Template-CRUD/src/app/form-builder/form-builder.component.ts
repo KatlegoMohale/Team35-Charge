@@ -560,7 +560,7 @@ export class FormBuilderComponent implements OnInit, OnDestroy {
       'Delete confirmation'
     );
     modalConfirm.componentInstance.message = this.translate.instant(
-      'Are you sure, that you want to delete this element?'
+      'Are you sure you want to delete this element?'
     );
 
     modalConfirm.result.then(

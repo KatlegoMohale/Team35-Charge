@@ -23,7 +23,7 @@ export class SocialPropertyComponent implements OnInit {
     this.component.buttons.push({
       id: UUID.UUID(),
       name: 'Facebook',
-      icon: 'fab fa-facebook-square',
+      icon: '',
       img_link: this.socialNetworks[0].img_link,
       link_to: ''
     });

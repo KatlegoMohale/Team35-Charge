@@ -2,30 +2,6 @@
   <button
     class="btn btn-default"
     placement="right"
-    [ngbTooltip]="'Preview on mobile' | translate"
-    (click)="setViewMode('mobile')"
-    [ngClass]="{
-      'btn-default': ['tablet-mode', 'desktop-mode'].includes(modeClass),
-      'btn-primary': modeClass === 'mobile-mode'
-    }"
-  >
-    <i class="fas fa-mobile-alt "></i>
-  </button>
-  <button
-    class="btn btn-default"
-    placement="right"
-    [ngbTooltip]="'Preview on tablet' | translate"
-    (click)="setViewMode('tablet')"
-    [ngClass]="{
-      'btn-default': ['tablet-mode', 'mobile-mode'].includes(modeClass),
-      'btn-primary': modeClass === 'tablet-mode'
-    }"
-  >
-    <i class="fas fa-tablet-alt"></i>
-  </button>
-  <button
-    class="btn btn-default"
-    placement="right"
     [ngbTooltip]="'Preview on desktop' | translate"
     (click)="setViewMode('desktop')"
     [ngClass]="{
@@ -37,8 +13,12 @@
   </button>
   <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
 </div>
+<button>Save template</button>
 <div class="modal-body" ngbAutofocus>
   <div [ngClass]="modeClass">
     <iframe [srcdoc] = "content | safeHtml" class="w-100" style="min-height: 80vh;"></iframe>
+    
   </div>
 </div>
+
+
