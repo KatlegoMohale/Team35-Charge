@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <button
+    class="btn btn-default"
+    placement="right"
+    [ngbTooltip]="'Preview on desktop' | translate"
+    (click)="setViewMode('desktop')"
+    [ngClass]="{
+      'btn-default': ['tablet-mode', 'mobile-mode'].includes(modeClass),
+      'btn-primary': modeClass === 'desktop-mode'
+    }"
+  >
+    <i class="fas fa-desktop"></i>
+  </button>
+  <button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+<button>Save template</button>
+<div class="modal-body" ngbAutofocus>
+  <div [ngClass]="modeClass">
+    <iframe [srcdoc] = "content | safeHtml" class="w-100" style="min-height: 80vh;"></iframe>
+    
+  </div>
+</div>
+
+
